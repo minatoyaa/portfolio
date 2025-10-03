@@ -1,0 +1,66 @@
+.prink-logo {
+    height: 80px;
+    width: 140px;
+}
+
+.testimonials-item-title{
+margin-left: 0px;
+}
+
+
+.testimonials-title{
+    margin-bottom: -5px;
+}
+
+.appflow img{
+    border-radius: 12px;
+    border: black 3px solid;
+    margin-left: 3px;
+    margin-bottom: 15px;
+    height: 440px;
+}
+
+.testimonials-list{
+    padding-top: 5px;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prink-btn {
+  padding: 10px 20px;
+  background:   hsl(45, 100%, 72%) ; 
+  color: #fff;           /* white text */
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none; /* remove underline */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.prink-btn:hover {
+  background:hsl(35, 100%, 68%); /* darker blue */
+  transform: translateY(-2px);
+}
+
+.prink-btn:active {
+  transform: translateY(0);
+}
+
+ @media (max-width: 1050px) {
+
+  /* About stack + service */
+  .appflow img{
+    height: 100%;
+    width: 100%;
+  }
+
+    .has-scrollbar{
+    margin-bottom: 15px;
+  }
+
+ }

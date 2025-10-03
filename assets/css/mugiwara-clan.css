@@ -1,0 +1,85 @@
+.coc-logo {
+    height: 60px;
+    width: 130px;
+    margin-left: -10px;
+}
+
+.testimonials-item-title{
+margin-left: 20px;
+}
+
+.testimonials-title{
+    margin-bottom: -5px;
+}
+
+.appflow img{
+    border-radius: 12px;
+    border: black 3px solid;
+    margin-left: 3px;
+    margin-bottom: 15px;
+}
+
+.testimonials-list{
+    padding-top: 5px;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prink-btn {
+  padding: 10px 20px;
+  background:   hsl(45, 100%, 72%) ; 
+  color: #fff;           /* white text */
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none; /* remove underline */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.prink-btn:hover {
+  background:hsl(35, 100%, 68%); /* darker blue */
+  transform: translateY(-2px);
+}
+
+.prink-btn:active {
+  transform: translateY(0);
+}
+
+p a {
+  display: inline;
+  text-decoration: none;
+}
+
+.article-title1 {
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.article-title1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--text-gradient-yellow);
+  border-radius: 3px;
+}
+
+ @media (max-width: 1050px) {
+
+  /* About stack  */
+
+
+    .has-scrollbar{
+    margin-bottom: 15px;
+  }
+
+
+
+ }

@@ -1,0 +1,146 @@
+
+:root {
+  --on: 1;
+    /* -cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));*/
+
+  --cord: hsl(45, 100%, calc((40 + (var(--on) * 30)) * 1%));
+  --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
+  --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
+  --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
+  --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
+}
+svg * {
+  pointer-events: none;
+}
+
+.toggle-scene {
+  transform: none !important;
+  overflow: visible !important;
+  height: 25vmin;
+  position: absolute;
+  display: flex;
+  left: 20px; /* instead of margin-right 1650px */
+  top: 30px;   /* instead of margin-top -40px */
+  position: fixed;
+  z-index: 10;
+}
+.toggle-scene__cord {
+  stroke: var(--cord);
+  cursor: move;
+}
+.toggle-scene__cord:nth-of-type(1) {
+  display: none;
+}
+.toggle-scene__cord:nth-of-type(2),
+.toggle-scene__cord:nth-of-type(3),
+.toggle-scene__cord:nth-of-type(4),
+.toggle-scene__cord:nth-of-type(5) {
+  display: none;
+}
+.toggle-scene__cord-end {
+  stroke: var(--cord);
+  fill: var(--cord);
+}
+.toggle-scene__dummy-cord {
+  stroke-width: 6;
+  stroke: var(--cord);
+}
+.bulb__filament {
+  stroke: var(--filament);
+}
+.bulb__shine {
+  stroke: var(--shine);
+}
+.bulb__flash {
+  stroke: #f5e0a3;
+  display: none;
+}
+.bulb__bulb {
+  stroke: var(--stroke);
+  fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
+}
+.bulb__cap {
+  fill: var(--cap);
+}
+.bulb__cap-shine {
+  fill: var(--shine);
+}
+.bulb__cap-outline {
+  stroke: var(--stroke);
+}
+
+.toggle-scene__hit-spot {
+  pointer-events: all;
+  cursor: grab;
+  position: relative;
+  z-index: 99999;
+
+}
+
+body.light-mode {
+  /* Background gradients */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 98%) 3%,
+    hsl(0, 0%, 90%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right,
+    hsla(0, 0%, 95%, 0.25) 0%,
+    hsla(0, 0%, 100%, 0) 100%
+  ), hsl(0, 0%, 95%);
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg,
+    hsla(45, 100%, 71%, 0.25) 0%,
+    hsla(35, 100%, 68%, 0) 59.86%
+  ), hsl(0, 0%, 95%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 70%) 0%,
+    hsla(0, 0%, 100%, 0) 50%
+  );
+
+  /* Solid colors */
+  --jet: hsl(0, 0%, 95%);
+  --onyx: hsl(0, 0%, 98%);
+  --eerie-black-1: hsl(0, 0%, 95%);
+  --eerie-black-2: hsl(0, 0%, 98%);
+  --smoky-black: hsl(0, 0%, 100%);
+  --white-1: hsl(0, 0%, 10%);
+  --white-2: hsl(0, 0%, 20%);
+  --light-gray: hsl(0, 0%, 40%);
+  --light-gray-70: hsla(0, 0%, 40%, 0.7);
+}
+
+
+
+
+.toggle-scene__cords:hover{ /* stop animation when i hover */
+  animation: cord-swing ;
+}
+
+@media (max-width: 767px){
+.toggle-scene {
+
+  height: 15vmin;
+  position: absolute;
+  z-index: 10;
+  position: fixed;
+  left: 400px; /* instead of margin-right 1650px */
+  top: 30px;   /* instead of margin-top -40px */
+}
+
+}
+@media (max-width: 1250px )and (min-width : 767px){
+.toggle-scene {
+
+  height: 20vmin;
+  position: absolute;
+  z-index: 10;
+  position: fixed;
+  left: 500px; /* instead of margin-right 1650px */
+  top: 10px;   /* instead of margin-top -40px */
+  margin-top: 50px;
+}
+
+}
