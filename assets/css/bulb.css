@@ -125,7 +125,6 @@ body.light-mode {
   height: 15vmin;
   position: absolute;
   z-index: 10;
-  position: fixed;
   left: 400px; /* instead of margin-right 1650px */
   top: 30px;   /* instead of margin-top -40px */
 }
@@ -137,10 +136,18 @@ body.light-mode {
   height: 20vmin;
   position: absolute;
   z-index: 10;
-  position: fixed;
   left: 500px; /* instead of margin-right 1650px */
   top: 10px;   /* instead of margin-top -40px */
   margin-top: 50px;
 }
+}
+@media (max-width: 450px){
+.toggle-scene {
 
+  height: 12vmin;
+  position: absolute;
+  z-index: 10;
+  left: 388px; /* instead of margin-right 1650px */
+  top: 5vh;   /* instead of margin-top -40px */
+}
 }
