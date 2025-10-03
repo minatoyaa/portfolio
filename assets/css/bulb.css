@@ -151,3 +151,14 @@ body.light-mode {
   top: 5vh;   /* instead of margin-top -40px */
 }
 }
+
+@media (max-width: 425px){
+.toggle-scene {
+
+  height: 12vmin;
+  position: absolute;
+  z-index: 10;
+  left: 370px; /* instead of margin-right 1650px */
+  top: 5vh;   /* instead of margin-top -40px */
+}
+}
